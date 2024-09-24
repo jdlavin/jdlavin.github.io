@@ -86,11 +86,40 @@ a .fab {
   color: white;
 }
 
-.course, .skills {
+.skills {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Ensures that all projects stretch to the same height */
+  margin-top: 20px;
+}
+
+.project {
+  flex: 0 0 30%; /* Each project takes up roughly one-third of the width */
+  text-align: center; /* Center the text inside each project */
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically inside each project */
+  align-items: center; /* Center content horizontally */
+  justify-content: space-between; /* Evenly space the title, image, and description */
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.project:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.3); /* Add vertical line except for the last project */
 }
 
 .project .title {
@@ -98,6 +127,18 @@ a .fab {
   -ms-flex: 0 0 33.3%;
   flex: 0 0 33.3%;
   max-width: 33%;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.projects .project a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .skills .column {
@@ -144,11 +185,17 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  .course {
-    display: block;
+  .projects {
+    flex-direction: column;
   }
 
-  .course .title, .course .descrition {
+  .project {
+    flex: 1 1 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Add bottom border for mobile view */
+  }
+
+  .title{
     max-width: 100%;
   }
 }
