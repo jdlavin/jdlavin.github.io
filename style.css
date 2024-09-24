@@ -93,21 +93,11 @@ a .fab {
   flex-wrap: wrap;
 }
 
-.course .title {
-  color: #509e98;
+.project .title {
+  color: #608595;
   -ms-flex: 0 0 33.3%;
   flex: 0 0 33.3%;
   max-width: 33%;
-}
-
-.course .descrition {
-  -ms-flex: 0 0 66.6%;
-  flex: 0 0 66.6%;
-  max-width: 66.6%;
-}
-
-.course .descrition p {
-  padding-left: 1em;
 }
 
 .skills .column {
@@ -121,9 +111,9 @@ a .fab {
 }
 
 .skills .column ul > li:before {
-  content: "►";
+  content: "▻";
   padding-right: 0.5em;
-  color: #509e98;
+  color: #CBEFFA;
 }
 
 article:has(.school) + article:has(.school) {
@@ -134,15 +124,16 @@ article:has(.school) + article:has(.school) {
   text-transform: capitalize;
 }
 
-.school span, .job-title span {
-  color: #889499;
-  text-decoration: underline;
+div.job-title:before, div.school:before {
+  content: "▻";
+  padding-right: 0.5em;
+  color: #CBEFFA;
 }
 
-ul.job-description li:before{
-  content: "✔";
-  padding-right: 0.5em;
-  color: #509e98;
+.job-title span, .school span {
+  color: #608595;
+  text-decoration: underline;
+  padding-left: 0.5em; /* Adds a bit of spacing between the arrow and the span text */
 }
 
 footer {
