@@ -59,7 +59,7 @@ h3 {
   text-transform: uppercase;
 }
 
-h3, h4 {
+h2, h4 {
   font-weight: bold;
 }
 
@@ -86,77 +86,6 @@ a .fab {
   color: white;
 }
 
-.skills {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.projects {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch; /* Ensures that all projects stretch to the same height */
-  margin-top: 20px;
-}
-
-.project {
-  flex: 0 0 30%; /* Each project takes up roughly one-third of the width */
-  text-align: center; /* Center the text inside each project */
-  padding: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column; /* Ensure content stacks vertically inside each project */
-  align-items: center; /* Center content horizontally */
-  justify-content: space-between; /* Evenly space the title, image, and description */
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.project:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.3); /* Add vertical line except for the last project */
-}
-
-.project .title {
-  color: #608595;
-  -ms-flex: 0 0 33.3%;
-  flex: 0 0 33.3%;
-  max-width: 33%;
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.projects .project a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.skills .column {
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.skills .column ul, ul.job-description {
-  list-style-type: none;
-}
-
-.skills .column ul > li:before {
-  content: "▻";
-  padding-right: 0.5em;
-  color: #CBEFFA;
-}
-
 article:has(.school) + article:has(.school) {
   margin-top: 20px; /* Adjust the value to your preferred spacing */
 }
@@ -175,6 +104,54 @@ div.job-title:before, div.school:before {
   color: #608595;
   text-decoration: underline;
   padding-left: 0.5em; /* Adds a bit of spacing between the arrow and the span text */
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.project .title {
+  color: #608595;
+}
+
+.project img {
+  width: 100%; /* Reduced from 100% */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 250px; /* Maximum width to prevent excessive stretching */
+  object-fit: contain; /* Ensure full visibility within the container */
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.projects .project a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.skills {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.skills .column {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.skills .column ul, ul.job-description {
+  list-style-type: none;
+}
+
+.skills .column ul > li:before {
+  content: "▻";
+  padding-right: 0.5em;
+  color: #CBEFFA;
 }
 
 footer {
