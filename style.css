@@ -157,7 +157,7 @@ div.job-title:before, div.school:before {
 
 footer {
   padding: 1em 1.5em;
-  background: #A7B8BF;
+  background: rgb(59, 59, 59);
   color: white;
   text-align: right;
 }
