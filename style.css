@@ -111,6 +111,7 @@ div.job-title:before, div.school:before {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   justify-content: center;
+  text-align: center;
 }
 
 .project .title {
